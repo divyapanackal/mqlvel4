@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <title>Media Query Level 4</title>
+  <link type="text/css" rel="stylesheet" href="bootstrap.css" media="all" />
+  <link type="text/css" rel="stylesheet" href="style.css" media="all" /> </head>
+
+<body>
+  <header id="header" class="mb-4">
+    <div class="container-fluid">
+      <h1>MQL4</h1> </div>
+  </header>
+  <div class="container-fluid">
+      <h2 class="mb-3">Media Queries Level 4</h2>
+  <div class="row">
+  <div class="col-md-3">
+    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+      <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">1. Pointer</a>
+      <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">2. Any-pointer</a>
+      <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">3. hover</a>
+      <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">4. any-hover</a>
+      <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">5. color-gamut</a>
+      <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">6. overflow-inline</a>
+      <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">7. overflow-block</a>
+      <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">8. update</a>
+    </div>
+  </div>
+<div class="col-md-9">
+
+<div class="tab-content" id="v-pills-tabContent">
+  <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+    <p>The <code> pointer</code> CSS media feature tests whether the user has a pointing device (such as a mouse), and if so, how accurate the primary pointing device is.
+    </p>
+    <p>The <code>pointer</code> media query has three values:</p>
+    <ol class="pl-3">
+      <li><code>none</code> - device has no pointer</li>
+      <li><code>coarse</code> - pointer has limited accuracy</li>
+      <li><code>fine</code> - pointer has high level of accuracy</li>
+    </ol>
+    <h4>Example</h4>
+    <p>This example creates a small checkbox and radio button for users with fine primary pointers and a large checkbox for users with coarse primary pointers.</p>
+    <p>The form controls below will be enlarged for devices with a coarse pointer</p>
+    <pre class="border">
+      <code data-lang="html" class="language-html">
+        <input id="test" type="checkbox" /><label for="test"> Look at me!</label>
+        <input id="test1" type="radio" /><label for="test1"> Look at me!</label>
+      </code>
+    </pre>
+    <pre class="border">
+      <code>
+        @media (pointer:coarse) {
+          input[type="checkbox"], input[type="radio"] {
+            min-width:30px;
+            min-height:40px;
+            background:transparent;
+          }
+        }
+      </code>
+    </pre>
+  </div>
+  <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+    <p>The <code>any-pointer</code> CSS media feature tests whether the user has any pointing device (such as a mouse), and if so, how accurate it is.    </p>
+    <p>The <code>any-pointer</code> media query has three values:</p>
+    <ol class="pl-3">
+      <li><code>none</code> - No pointing device is available.</li>
+      <li><code>coarse</code> - At least one input mechanism includes a pointing device of limited accuracy.</li>
+      <li><code>fine</code> - At least one input mechanism includes an accurate pointing device.</li>
+    </ol>
+    <h4>Example</h4>
+    <p>This example creates a small checkbox and radio button for users with fine primary pointers and a large checkbox for users with coarse primary pointers.</p>
+    <p>The form controls below will be enlarged for devices with a coarse pointer</p>
+    <pre class="border">
+      <code data-lang="html" class="language-html">
+        <input id="test21" type="checkbox" /><label for="test21"> Look at me!</label>
+        <input id="test22" type="radio" /><label for="test22"> Look at me!</label>
+      </code>
+    </pre>
+    <pre class="border">
+      <code>
+        @media (any-pointer:coarse) {
+          input[type="checkbox"], input[type="radio"] {
+            min-width:30px;
+            min-height:40px;
+            background:transparent;
+          }
+        }
+      </code>
+    </pre>
+  </div>
+  <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab"><p>The <code>hover</code> CSS media feature can be used to test whether the user's primary input mechanism can hover over elements.</p>
+    <p>The <code>hover</code> media query has two values:</p>
+    <ol class="pl-3">
+      <li><code>none</code> - The primary input mechanism cannot hover at all or cannot conveniently hover (e.g., many mobile devices emulate hovering when the user performs an inconvenient long tap), or there is no primary pointing input mechanism.</li>
+      <li><code>hover</code> - The primary input mechanism can conveniently hover over elements.</li>
+    </ol>
+    <h4>Example</h4>
+    <p>This example creates a small checkbox and radio button for users with fine primary pointers and a large checkbox for users with coarse, primary pointers.</p>
+    <p>The form controls below will be enlarged for devices with a coarse pointer</p>
+    <pre class="border">
+      <code data-lang="html" class="language-html">
+        <a href="#" class="lnk-hover"> Look at me!</a>
+      </code>
+    </pre>
+    <pre class="border">
+      <code>
+        @media (hover: hover) {
+          a:hover {
+            background: yellow;
+          }
+        }
+      </code>
+    </pre></div>
+  <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
+</div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+  <script src='jquery-3.3.1.min.js'></script>
+    <script src='bootstrap.js'></script>
+
+</body>
+
+</html>
