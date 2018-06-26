@@ -326,6 +326,39 @@ pre input {
     color: red;
   }
 }
+@media (hover: hover) {
+  .lnk-hover1:hover {
+    background: yellow;
+  }
+}
+@media (color-gamut: srgb) {
+  .cg {
+    background: green;
+  }
+}
+@media (overflow-inline: scroll) {
+  .is {
+    color: red;
+  }
+}
+@media (overflow-block: scroll) {
+  .ob {
+    color: red;
+  }
+}
+@keyframes jiggle {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(25px);
+  }
+}
+@media (update: fast) {
+  .update {
+    animation: 1s jiggle linear alternate infinite;
+  }
+}
 
 /*................................................
     3. COMMON CSS CLASSES

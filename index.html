@@ -14,42 +14,30 @@
       <h1>MQL4</h1> </div>
   </header>
   <div class="container-fluid">
-      <h2 class="mb-3">Media Queries Level 4</h2>
-  <div class="row">
-  <div class="col-md-3">
-    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-      <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">1. Pointer</a>
-      <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">2. Any-pointer</a>
-      <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">3. hover</a>
-      <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">4. any-hover</a>
-      <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">5. color-gamut</a>
-      <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">6. overflow-inline</a>
-      <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">7. overflow-block</a>
-      <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">8. update</a>
-    </div>
-  </div>
-<div class="col-md-9">
-
-<div class="tab-content" id="v-pills-tabContent">
-  <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-    <p>The <code> pointer</code> CSS media feature tests whether the user has a pointing device (such as a mouse), and if so, how accurate the primary pointing device is.
-    </p>
-    <p>The <code>pointer</code> media query has three values:</p>
-    <ol class="pl-3">
-      <li><code>none</code> - device has no pointer</li>
-      <li><code>coarse</code> - pointer has limited accuracy</li>
-      <li><code>fine</code> - pointer has high level of accuracy</li>
-    </ol>
-    <h4>Example</h4>
-    <p>This example creates a small checkbox and radio button for users with fine primary pointers and a large checkbox for users with coarse primary pointers.</p>
-    <p>The form controls below will be enlarged for devices with a coarse pointer</p>
-    <pre class="border">
+    <h2 class="mb-3">Media Queries Level 4</h2>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical"> <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">1. Pointer</a> <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">2. Any-pointer</a> <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">3. hover</a> <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">4. any-hover</a> <a class="nav-link" id="v-pills-cg-tab" data-toggle="pill" href="#v-pills-cg" role="tab" aria-controls="v-pills-cg" aria-selected="false">5. color-gamut</a> <a class="nav-link" id="v-pills-oi-tab" data-toggle="pill" href="#v-pills-oi" role="tab" aria-controls="v-pills-oi" aria-selected="false">6. overflow-inline</a> <a class="nav-link" id="v-pills-ob-tab" data-toggle="pill" href="#v-pills-ob" role="tab" aria-controls="v-pills-ob" aria-selected="false">7. overflow-block</a> 
+        <a class="nav-link" id="v-pills-update-tab" data-toggle="pill" href="#v-pills-update" role="tab" aria-controls="v-pills-update" aria-selected="false">8. update</a> </div>
+      </div>
+      <div class="col-md-9">
+        <div class="tab-content" id="v-pills-tabContent">
+          <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+            <p>The <code> pointer</code> CSS media feature tests whether the user has a pointing device (such as a mouse), and if so, how accurate the primary pointing device is. </p>
+            <p>The <code>pointer</code> media query has three values:</p>
+            <ol class="pl-3">
+              <li><code>none</code> - device has no pointer</li>
+              <li><code>coarse</code> - pointer has limited accuracy</li>
+              <li><code>fine</code> - pointer has high level of accuracy</li>
+            </ol>
+            <h4>Example</h4>
+            <p>This example creates a small checkbox and radio button for users with fine primary pointers and a large checkbox for users with coarse primary pointers.</p>
+            <p>The form controls below will be enlarged for devices with a coarse pointer</p> <pre class="border">
       <code data-lang="html" class="language-html">
         <input id="test" type="checkbox" /><label for="test"> Look at me!</label>
         <input id="test1" type="radio" /><label for="test1"> Look at me!</label>
       </code>
-    </pre>
-    <pre class="border">
+    </pre> <pre class="border">
       <code>
         @media (pointer:coarse) {
           input[type="checkbox"], input[type="radio"] {
@@ -59,26 +47,23 @@
           }
         }
       </code>
-    </pre>
-  </div>
-  <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-    <p>The <code>any-pointer</code> CSS media feature tests whether the user has any pointing device (such as a mouse), and if so, how accurate it is.    </p>
-    <p>The <code>any-pointer</code> media query has three values:</p>
-    <ol class="pl-3">
-      <li><code>none</code> - No pointing device is available.</li>
-      <li><code>coarse</code> - At least one input mechanism includes a pointing device of limited accuracy.</li>
-      <li><code>fine</code> - At least one input mechanism includes an accurate pointing device.</li>
-    </ol>
-    <h4>Example</h4>
-    <p>This example creates a small checkbox and radio button for users with fine primary pointers and a large checkbox for users with coarse primary pointers.</p>
-    <p>The form controls below will be enlarged for devices with a coarse pointer</p>
-    <pre class="border">
+    </pre> </div>
+          <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+            <p>The <code>any-pointer</code> CSS media feature tests whether the user has any pointing device (such as a mouse), and if so, how accurate it is. </p>
+            <p>The <code>any-pointer</code> media query has three values:</p>
+            <ol class="pl-3">
+              <li><code>none</code> - No pointing device is available.</li>
+              <li><code>coarse</code> - At least one input mechanism includes a pointing device of limited accuracy.</li>
+              <li><code>fine</code> - At least one input mechanism includes an accurate pointing device.</li>
+            </ol>
+            <h4>Example</h4>
+            <p>This example creates a small checkbox and radio button for users with fine primary pointers and a large checkbox for users with coarse primary pointers.</p>
+            <p>The form controls below will be enlarged for devices with a coarse pointer</p> <pre class="border">
       <code data-lang="html" class="language-html">
         <input id="test21" type="checkbox" /><label for="test21"> Look at me!</label>
         <input id="test22" type="radio" /><label for="test22"> Look at me!</label>
       </code>
-    </pre>
-    <pre class="border">
+    </pre> <pre class="border">
       <code>
         @media (any-pointer:coarse) {
           input[type="checkbox"], input[type="radio"] {
@@ -88,23 +73,21 @@
           }
         }
       </code>
-    </pre>
-  </div>
-  <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab"><p>The <code>hover</code> CSS media feature can be used to test whether the user's primary input mechanism can hover over elements.</p>
-    <p>The <code>hover</code> media query has two values:</p>
-    <ol class="pl-3">
-      <li><code>none</code> - The primary input mechanism cannot hover at all or cannot conveniently hover (e.g., many mobile devices emulate hovering when the user performs an inconvenient long tap), or there is no primary pointing input mechanism.</li>
-      <li><code>hover</code> - The primary input mechanism can conveniently hover over elements.</li>
-    </ol>
-    <h4>Example</h4>
-    <p>This example creates a small checkbox and radio button for users with fine primary pointers and a large checkbox for users with coarse, primary pointers.</p>
-    <p>The form controls below will be enlarged for devices with a coarse pointer</p>
-    <pre class="border">
+    </pre> </div>
+          <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+            <p>The <code>hover</code> CSS media feature can be used to test whether the user's primary input mechanism can hover over elements.</p>
+            <p>The <code>hover</code> media query has two values:</p>
+            <ol class="pl-3">
+              <li><code>none</code> - The primary input mechanism cannot hover at all or cannot conveniently hover (e.g., many mobile devices emulate hovering when the user performs an inconvenient long tap), or there is no primary pointing input mechanism.</li>
+              <li><code>hover</code> - The primary input mechanism can conveniently hover over elements.</li>
+            </ol>
+            <h4>Example</h4>
+            <p>This example creates a small checkbox and radio button for users with fine primary pointers and a large checkbox for users with coarse, primary pointers.</p>
+            <p>The form controls below will be enlarged for devices with a coarse pointer</p> <pre class="border">
       <code data-lang="html" class="language-html">
         <a href="#" class="lnk-hover"> Look at me!</a>
       </code>
-    </pre>
-    <pre class="border">
+    </pre> <pre class="border">
       <code>
         @media (hover: hover) {
           a:hover {
@@ -113,28 +96,140 @@
         }
       </code>
     </pre></div>
-  <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
-</div>
-  </div>
-</div>
+          <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+            <p>The <code>any-hover</code> CSS media feature can be used to test whether any available input mechanism can hover over elements.</p>
+            <p>The <code>hover</code> media query has two values:</p>
+            <ol class="pl-3">
+              <li><code>none</code> - None of the available input mechanism(s) can hover conveniently, or there is no pointing input mechanism.</li>
+              <li><code>hover</code> - One or more available input mechanisms can conveniently hover over elements.</li>
+            </ol>
+            <h4>Example</h4> <pre class="border">
+      <code data-lang="html" class="language-html">
+        <a href="#" class="lnk-hover1"> Look at me!</a>
+      </code>
+    </pre> <pre class="border">
+      <code>
+        @media (any-hover: hover) {
+          a:hover {
+            background: yellow;
+          }
+        }
+      </code>
+    </pre></div>
+          <div class="tab-pane fade" id="v-pills-cg" role="tabpanel" aria-labelledby="v-pills-cg-tab">
+            <p>The color-gamut CSS media feature can be used to test the approximate range of colors that are supported by the user agent and the output device.</p>
+            <p>The <code>hover</code> media query has three values:</p>
+            <ol class="pl-3">
+              <li><code>srgb</code> - The output device can support approximately the sRGB gamut or more. This includes the vast majority of color displays.</li>
+              <li><code>p3</code> - The output device can support approximately the gamut specified by the DCI P3 Color Space or more. The p3 gamut is larger than and includes the srgb gamut.</li>
+              <li><code>rec2020</code> - The output device can support approximately the gamut specified by the ITU-R Recommendation BT.2020 Color Space or more. The rec2020 gamut is larger than and includes the p3 gamut.</li>
+            </ol>
+            <h4>Example</h4> <pre class="border">
+      <code data-lang="html" class="language-html">
+        <p class="cg">This is a test.</p>
+      </code>
+    </pre> <pre class="border">
+            <code>
+              @media (color-gamut: srgb) {
+                p {
+                  background: #f4ae8a;
+                }
+              }
+            </code>
+          </pre> </div>
+
+
+          <div class="tab-pane fade" id="v-pills-oi" role="tabpanel" aria-labelledby="v-pills-oi-tab">
+            <p>The <code>overflow-inline</code> CSS media feature can be used to test how the output device handles content that overflows the initial containing block along the inline axis.</p>
+            <p>The <code>overflow-inline</code> media query has three values:</p>
+            <ol class="pl-3">
+              <li><code>none</code> - Content that overflows the inline axis is not displayed.</li>
+              <li><code>scroll</code> - Content that overflows the inline axis can be seen by scrolling to it.</li>              
+            </ol>
+            <h4>Example</h4> 
+            <pre class="border">
+      <code data-lang="html" class="language-html">
+        <p class="is">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac turpis eleifend, fringilla velit ac, aliquam tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc velit erat, tempus id rutrum sed, dapibus ut urna. Integer vehicula nibh a justo imperdiet rutrum. Nam faucibus pretium orci imperdiet sollicitudin. Nunc id facilisis dui. Proin elementum et massa et feugiat. Integer rutrum ullamcorper eleifend. Proin sit amet tincidunt risus. Sed nec augue congue eros accumsan tincidunt sed eget ex.</p>
+      </code>
+    </pre> 
+    <pre class="border">
+            <code>
+              @media (overflow-inline: scroll) {
+                p {
+                  color: red;
+                }
+              }
+            </code>
+          </pre> </div>
+          <div class="tab-pane fade" id="v-pills-ob" role="tabpanel" aria-labelledby="v-pills-ob-tab">
+            <p>The <code>overflow-block</code> CSS media feature can be used to test how the output device handles content that overflows the initial containing block along the block axis.</p>
+            <p>The <code>hover</code> media query has four values:</p>
+            <ol class="pl-3">
+              <li><code>none</code> - Content that overflows the block axis is not displayed.</li>
+              <li><code>scroll</code> - Content that overflows the block axis can be seen by scrolling to it.
+</li>
+              <li><code>optional-paged</code> - Content that overflows the block axis can be seen by scrolling to it, but page breaks can be manually triggered (such as via break-inside, etc.) to cause the following content to display on the following page.
+</li>
+                            <li><code>paged</code> - Content is broken up into discrete pages; content that overflows one page in the block axis is displayed on the following page.
+</li>
+            </ol>
+            <h4>Example</h4> <pre class="border">
+      <code data-lang="html" class="language-html">
+        <p class="ob">This is a test.</p>
+      </code>
+    </pre> <pre class="border">
+            <code>
+              @media (overflow-block: scroll) {
+                p {
+                  color: red;
+                }
+              }
+            </code>
+          </pre> </div>
+
+                    <div class="tab-pane fade" id="v-pills-update" role="tabpanel" aria-labelledby="v-pills-update-tab">
+            <p>The <code>update</code> CSS media feature can be used to test how frequently (if at all) the output device is able to modify the appearance of content.</p>
+            <p>The <code>hover</code> media query has three values:</p>
+            <ol class="pl-3">
+              <li><code>none</code> - Once it has been rendered, the layout can no longer be updated. Example: documents printed on paper.
+</li>
+              <li><code>slow</code> - The layout may change dynamically according to the usual rules of CSS, but the output device is not able to render or display changes quickly enough for them to be perceived as a smooth animation. Examples: e-book readers or severely underpowered devices.</li>
+              <li><code>fast</code> - The layout may change dynamically according to the usual rules of CSS, and the output device is not unusually constrained in speed, so regularly-updating things like CSS Animations can be used. Example: computer screens.</li>
+            </ol>
+            <h4>Example</h4> <pre class="border">
+      <code data-lang="html" class="language-html">
+        <p class="update">If this text animates for you, you are using a fast-updating device.</p>
+      </code>
+    </pre> <pre class="border">
+            <code>
+              @keyframes jiggle {
+                from {
+                  transform: translateY(0);
+                }
+
+                to {
+                  transform: translateY(25px);
+                }
+              }
+
+              @media (update: fast) {
+                p {
+                  animation: 1s jiggle linear alternate infinite;
+                }
+              }
+            </code>
+          </pre> </div>
 
 
 
 
 
-
-
-
-
-
-
-
-
-
+        </div>
+      </div>
+    </div>
   </div>
   <script src='jquery-3.3.1.min.js'></script>
-    <script src='bootstrap.js'></script>
-
+  <script src='bootstrap.js'></script>
 </body>
 
 </html>
